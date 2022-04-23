@@ -1,7 +1,7 @@
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
 const consoleTable = require('console.table');
-
+//TODO: Refactor server.js to move functions to seperate file
 require('dotenv').config();
 
 const connection = mysql.createConnection({
@@ -105,7 +105,7 @@ const promptUser = () => {
 
 // function to show all departments 
 showDepartments = () => {
-    console.table('Showing all departments...\n');
+    console.table('Showing all departments');
     const sql = `SELECT department.id AS id, department.name AS department FROM department`;
 
     connection.query(sql, (err, rows) => {
@@ -117,11 +117,11 @@ showDepartments = () => {
 
 // function to show all roles 
 showRoles = () => {
-    console.table('Showing all roles...\n');
+    console.table('Showing all roles');
 
     const sql = `SELECT role.id, role.title, department.name AS department
-                 FROM role
-                 INNER JOIN department ON role.department_id = department.id`;
+                FROM role
+                INNER JOIN department ON role.department_id = department.id`;
 
     connection.query(sql, (err, rows) => {
         if (err) throw err;
@@ -132,7 +132,7 @@ showRoles = () => {
 
 // function to show all employees 
 showEmployees = () => {
-    console.table('Showing all employees...\n');
+    console.table('Showing all employees');
     const sql = `SELECT employee.id, 
                         employee.first_name, 
                         employee.last_name, 
@@ -253,7 +253,7 @@ addRole = () => {
 addEmployee = () => {
     inquirer.prompt([{
                 type: 'input',
-                name: 'fistName',
+                name: 'firstName',
                 message: "What is the employee's first name?",
                 validate: addFirst => {
                     if (addFirst) {
@@ -279,7 +279,7 @@ addEmployee = () => {
             }
         ])
         .then(answer => {
-            const params = [answer.fistName, answer.lastName]
+            const params = [answer.firstName, answer.lastName]
 
             // grab roles from roles table
             const roleSql = `SELECT role.id, role.title FROM role`;
@@ -494,7 +494,7 @@ updateManager = () => {
 
 // function to view employee by department
 employeeDepartment = () => {
-    console.table('Showing employee by departments...\n');
+    console.table('Showing employee by departments');
     const sql = `SELECT employee.first_name, 
                         employee.last_name, 
                         department.name AS department
@@ -619,7 +619,7 @@ deleteEmployee = () => {
 
 // view department budget 
 viewBudget = () => {
-    console.table('Showing budget by department...\n');
+    console.table('Showing budget by department');
 
     const sql = `SELECT department_id AS id, 
                         department.name AS department,
