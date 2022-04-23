@@ -1,5 +1,3 @@
-USE employee_db;
-
 INSERT INTO department (name)
 
 VALUES
@@ -23,31 +21,29 @@ VALUES
 
 ('Software Engineer', 120000, 3),
 
-('Graphic Designer', 50000, 3),
+('Graphic Designer', 50000, 3)
 
 ('Network Security', 60000, 4),
 
-('Customer Support', 40000, 4);
+('Customer Support', 40000, 4),
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 
 VALUES
-('George','Wilson', 1, 3),
+('George','Wilson', 1, null),
 
-('Leigh', 'Avidan', 1, 3),
+('Leigh', 'Avidan', 1, null),
 
 ('Susan', 'Hanson', 1, null),
 
 ('Ralph','Warner', 2, 3),
 
-('Doug','Dimidome', 2, null),
+('Doug','Dimidome', 2, 2),
 
 ('Layton','Smith', 3, null),
 
 ('Greg','Jones', 3, null),
 
-('Charles','Higgs', 4, null),
+('Charles','Higgs', 4, 4),
 
-('Rachel','Brown', 8, 8);
-
-('Board','Member', 1, null);
+('Rachel','Brown', 1, null),
