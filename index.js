@@ -1,6 +1,10 @@
+//requirements
+const mysql = require('mysql2');
+const inquirer = require('inquirer');
+const consoleTable = require('console.table');
 
-//creates series of questions for user to answer inside terminal. Extends from lines 4-86
-
+//creates series of questions for user to answer inside terminal. 
+//Extends from lines 8-86
 const promptUser = () => {
     inquirer.prompt([{
             type: 'list',
@@ -86,7 +90,7 @@ const promptUser = () => {
 };
 
 
-// function to show all departments 
+// function to show all departments 94-103
 showDepartments = () => {
     console.table('Showing all departments');
     const sql = `SELECT department.id AS id, department.name AS department FROM department`;
@@ -98,7 +102,7 @@ showDepartments = () => {
     });
 };
 
-// function to show all roles 
+// function to show all roles 106-118
 showRoles = () => {
     console.table('Showing all roles');
 
@@ -135,7 +139,7 @@ showEmployees = () => {
     });
 };
 
-// function to add a department 
+// function to add a department 143-167
 addDepartment = () => {
     inquirer.prompt([{
             type: 'input',
@@ -162,7 +166,7 @@ addDepartment = () => {
         });
 };
 
-// function to add a role 
+// function to add a role 170-199
 addRole = () => {
     inquirer.prompt([{
                 type: 'input',
@@ -232,7 +236,7 @@ addRole = () => {
         });
 };
 
-// function to add an employee 
+// function to add an employee 240-270
 addEmployee = () => {
     inquirer.prompt([{
                 type: 'input',
@@ -330,7 +334,7 @@ addEmployee = () => {
         });
 };
 
-// function to update an employee 
+// function to update an employee 338-407
 updateEmployee = () => {
     // get employees from employee table 
     const employeeSql = `SELECT * FROM employee`;
@@ -402,7 +406,7 @@ updateEmployee = () => {
     });
 };
 
-// function to update an employee 
+// function to update a manager  410
 updateManager = () => {
     // get employees from employee table 
     const employeeSql = `SELECT * FROM employee`;
@@ -475,7 +479,7 @@ updateManager = () => {
     });
 };
 
-// function to view employee by department
+// function to view employee by department 482-497
 employeeDepartment = () => {
     console.table('Showing employee by departments');
     const sql = `SELECT employee.first_name, 
@@ -492,7 +496,7 @@ employeeDepartment = () => {
     });
 };
 
-// function to delete department
+// function to delete department 500-532
 deleteDepartment = () => {
     const deptSql = `SELECT * FROM department`;
 
@@ -527,7 +531,7 @@ deleteDepartment = () => {
     });
 };
 
-// function to delete role
+// function to delete role 535-657
 deleteRole = () => {
     const roleSql = `SELECT * FROM role`;
 
@@ -562,7 +566,7 @@ deleteRole = () => {
     });
 };
 
-// function to delete employees
+// function to delete employees 570-605
 deleteEmployee = () => {
     // get employees from employee table 
     const employeeSql = `SELECT * FROM employee`;
@@ -600,7 +604,7 @@ deleteEmployee = () => {
     });
 };
 
-// view department budget extends from lines 604-619
+// view department budget extends from lines 608-623
 viewBudget = () => {
     console.table('Showing budget by department');
 
