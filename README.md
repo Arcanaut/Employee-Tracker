@@ -13,7 +13,6 @@ mySql2,
 sequelize, 
 console.table
 
-Git/GitHub
 ## Why did I build this project?
 This app was developed as a way of learning CRUD (Creating, Reading, Updating, Deleting) data inside a database with mySql
 
