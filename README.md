@@ -3,7 +3,7 @@
 Designed and developed by Brendan Ahearn
 
 ![Employee Tracker](https://github.com/Arcanaut/Employee-Tracker/blob/main/assets/thumbnail.png)
-![Video Demonstration](chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/670d5e5f-a316-4564-y30c-36a14a4d7fce)
+VIDEO DEMONSTRATION ==> https://drive.google.com/file/d/1hdgEBqctiUvRPvrxsAZNER27MtyDrVYP/view
 ## App Description
 
 JavaScript,
