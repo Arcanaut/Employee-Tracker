@@ -18,9 +18,9 @@ Git/GitHub
 This app was developed as a way of learning CRUD (Creating, Reading, Updating, Deleting) data inside a database with mySql
 
 ## How to install this application
-navigate to the root folder and use the command 'npm install' to automatically install all required npms. Afterwards, 
+navigate to the root folder and use the command 'npm install' to automatically install all required npms.
 ## How to use this application
-type in the terminal 'npm start' a table will appear which you can interact with my using the arrow keys and hitting enter to confirm your choices. Additionally you may freely type in specific fields such as the names of new employees, or new roles.
+Type in the terminal 'npm start' a table will appear which you can interact with my using the arrow keys and hitting enter to confirm your choices. Additionally you may freely type in specific fields such as the names of new employees, or new roles.
 ## license
 MIT License
 
